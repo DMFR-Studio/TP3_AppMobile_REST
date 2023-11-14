@@ -1,7 +1,6 @@
 const http = require("http");
 const app = require("./server.js");
 
-http.createServer(app).listen(process.env.PORT || 3000, () => {
-  console.log("=> Server écoutant sur le port http://localhost:8081");
-  console.log("=> Pour arrêter le serveur : Ctrl + C");
-});
+const app = http.createServer(app);
+
+app.listen(process.env.PORT || 3000);
