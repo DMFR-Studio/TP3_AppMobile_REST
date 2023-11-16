@@ -3,7 +3,6 @@ const app = express();
 app.use(express.json());
 
 const conn = require("./connexion");
-console.log(conn)
 
 app.post("/addUser", (req, res) => {
   const { first_name, last_name, email, password, country } = req.body;
